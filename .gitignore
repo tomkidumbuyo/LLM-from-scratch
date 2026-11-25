@@ -1,0 +1,141 @@
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# ==============================
+# Virtual Environments
+# ==============================
+venv/
+.venv/
+env/
+ENV/
+.conda/
+.python-version
+
+# ==============================
+# PyTorch / Machine Learning
+# ==============================
+*.pt
+*.pth
+*.ckpt
+*.model
+*.onnx
+*.safetensors
+*.torchscript
+
+# TensorBoard
+runs/
+logs/
+tensorboard/
+lightning_logs/
+
+# Weights & Biases
+wandb/
+.wandb/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# ==============================
+# Datasets & Training Artifacts
+# ==============================
+data/
+datasets/
+artifacts/
+checkpoints/
+models/
+outputs/
+predictions/
+
+# ==============================
+# Jupyter
+# ==============================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ==============================
+# CUDA / GPU
+# ==============================
+*.ptx
+*.cubin
+*.fatbin
+*.nv
+
+# ==============================
+# Environment Variables / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials.json
+
+# ==============================
+# Testing / Coverage
+# ==============================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+test-results/
+
+# ==============================
+# Type Checking / Linting
+# ==============================
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+.pytype/
+
+# ==============================
+# IDEs / Editors
+# ==============================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ==============================
+# OS Files
+# ==============================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==============================
+# Packaging
+# ==============================
+.eggs/
+MANIFEST
+.installed.cfg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================
+# Temporary Files
+# ==============================
+tmp/
+temp/
+*.tmp
+*.bak
+*.log
