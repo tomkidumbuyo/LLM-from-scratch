@@ -8,8 +8,7 @@ class DataEmbedding:
         self.vocab_size = vocab_size
 
 
-    def embed_data(self, inputs):
-        token_embedding_layer, position_embedding_layer = self.create_embedding_layers()
+    def embed_data(self, token_embedding_layer, position_embedding_layer, inputs):
         token_embeddings = token_embedding_layer(inputs)
         position_embeddings = position_embedding_layer(torch.arange(self.context_length))
         input_embeddings = token_embeddings + position_embeddings
