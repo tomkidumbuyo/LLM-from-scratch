@@ -1,7 +1,7 @@
 
 import torch
-from transformer import TransformerBlock
-from layer_norm import LayerNorm
+from .transformer import TransformerBlock
+from .layer_norm import LayerNorm
 import torch.nn as nn
 
 

@@ -1,15 +1,14 @@
 import os
-import torch
 
 from pathlib import Path
+import torch
 from dotenv import load_dotenv
 
-load_dotenv()
+PROJECT_ROOT = Path(__file__).resolve().parent
+load_dotenv(PROJECT_ROOT / ".env")
 
-BASE_DIR = Path(__file__).resolve().parent
-
-DATA_PATH = BASE_DIR / "data" / "the-verdict.txt"
-MODEL_PATH = BASE_DIR / "checkpoints" / "gpt_model.pth"
+DATA_PATH = PROJECT_ROOT / "data" / "the-verdict.txt"
+MODEL_PATH = PROJECT_ROOT / "checkpoints" / "gpt_model.pth"
 
 GPT_CONFIG_124M = {
     "vocab_size": 50257,

@@ -3,13 +3,11 @@ import math
 import torch
 import tiktoken
 
-from torch.utils.data import DataLoader
 from torch.nn.functional import cross_entropy
 
-from data_preparation.dataset import GPTDataset
-from gpt import GPTModel
-
-from generate import generate_and_print_sample
+from .data import create_dataloader_v1
+from .transformer.gpt import GPTModel
+from generation.generate import generate_and_print_sample
 
 from config import (
     GPT_CONFIG_124M,
@@ -18,33 +16,6 @@ from config import (
     MODEL_PATH,
     get_device
 )
-
-
-def create_dataloader_v1(
-    txt,
-    batch_size=4,
-    max_length=256,
-    stride=128,
-    shuffle=True,
-    drop_last=True,
-    num_workers=0
-):
-    tokenizer = tiktoken.get_encoding("gpt2")
-
-    dataset = GPTDataset(
-        txt,
-        tokenizer,
-        max_length,
-        stride
-    )
-
-    return DataLoader(
-        dataset,
-        batch_size=batch_size,
-        shuffle=shuffle,
-        drop_last=drop_last,
-        num_workers=num_workers
-    )
 
 
 def calc_loss_batch(

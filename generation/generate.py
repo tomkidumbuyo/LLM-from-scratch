@@ -3,8 +3,8 @@ import argparse
 import torch
 import tiktoken
 
-from gpt import GPTModel
 from config import MODEL_PATH, get_device
+from pretraining.transformer.gpt import GPTModel
 
 
 def text_to_token_ids(text, tokenizer):
